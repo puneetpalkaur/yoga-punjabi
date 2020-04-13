@@ -1,13 +1,21 @@
+div{
+  box-sizing: border-box;
+}
+.main{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.nav{
+  box-shadow: 0px 0px 6px gray;
+}
 .container{
   width: 100%;
-  display: inline-grid;
-  grid-template-columns: auto auto;
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
   background: beige;
-  box-shadow: 0px 0px 6px gray;
-  position: fixed;
-  top:0;
   overflow: hidden;
 }
 .title{
@@ -33,13 +41,13 @@
   grid-template-rows: auto auto;
   margin-top: 10px;
   justify-content: center;
+  padding-bottom: 12px;
 
 }
 .yoga-card-img{
   width: 350px;
 }
 .card-text{
-  padding: 20px 20px 20px 20px;
   background: #514654;
   color: white;
   font-size: 20px;
@@ -48,23 +56,19 @@
 
 .main-text{
   width: 100%;
-  padding: 50px 50px 50px 50px;
   box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
   background: #7f8b4bab;
   color: white;
   font-size: 40px;
   line-height: 40px;
   font-weight: 600;
-  margin-top: 177px;
 }
 .section-1{
   background: #f2d0a5;
-  padding: 0px 20px 0px 20px;
   width: 100%;
   text-align: center;
   font-size: 40px;
   color: #514654;
-  margin-top: 10px;
   font-weight: 600;
 }
 
@@ -77,25 +81,54 @@ details summary::-webkit-details-marker {
   margin-top: 20px;
   background: #a9b186;;
   text-align: center;
-  padding: 20px 20px 20px 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  display: inline-flex;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+li{
+  width: 50%;
+  border: 1px solid #d6a464
+}
+li a {
+  display: block;
+  padding: 8px;
+  color: #514654;
+}
+a {
+  text-decoration: none;
+}
+#asana, #pranayama{
+  margin-top: 6px;
 }
 
 
+
+
 @media only screen and (max-width: 600px) {
-  .container{
-    padding: 0 20px 0 20px;
-    height: 177px;
-  }
   .header-img{
-    width: 150px;
+    width: 125px;
   }
   .main-text{
     width: 100%;
     line-height: 40px;
-    font-size: 30px;
-    padding: 30px 20px 30px 20px;
+    font-size: 26px;
+    padding: 10px;
   }
   .section-1{
     font-size: 30px;
+    cursor: pointer;
   }
+}
+
+body{
+  margin: 0!important;
+  padding: 0!important;
 }
