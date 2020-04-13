@@ -1,0 +1,98 @@
+.container{
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 50px;
+  background: beige;
+  box-shadow: 0px 0px 6px gray;
+  position: fixed;
+  width: 100vw;
+}
+.title{
+  color: #7f8b4b;
+  font-size: 100px;
+  text-shadow: 1px 1px 0px #514654;
+}
+.header-img{
+  width: 250px;
+}
+.title-font{
+  font-family: 'Baloo Paaji 2', cursive;
+}
+.generic-font{
+  font-family: 'Mukta Mahee', sans-serif;
+}
+.main-card{
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  display: grid;
+  text-align: center;
+  grid-template-rows: auto auto;
+  margin-top: 10px;
+  justify-content: center;
+  width: 111vw;
+}
+.yoga-card-img{
+  width: 350px;
+}
+.card-text{
+  padding: 20px 20px 20px 20px;
+  background: #514654;
+  color: white;
+  font-size: 20px;
+
+}
+
+.main-text{
+  width: 100%;
+  padding: 50px 50px 50px 50px;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+  background: #7f8b4bab;
+  color: white;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 600;
+  margin-top: 177px;
+}
+.section-1{
+  background: #f2d0a5;
+  padding: 0px 20px 0px 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: #514654;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+.footer{
+  width: 100%;
+  margin-top: 20px;
+  background: #a9b186;;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .container{
+    padding: 0 20px 0 20px;
+    height: 177px;
+  }
+  .header-img{
+    width: 150px;
+  }
+  .main-text{
+    width: 100%;
+    line-height: 40px;
+    font-size: 30px;
+    padding: 30px 20px 30px 20px;
+  }
+  .section-1{
+    font-size: 30px;
+  }
+}
