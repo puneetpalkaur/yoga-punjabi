@@ -1,0 +1,15 @@
+.footer{
+  width: 100%;
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+  align-items: center;
+  background: #665c65c7;
+  box-shadow: 1px 1px 7px grey;
+  color: white;
+}
+
+.font-24{
+  font-size: 24px;
+}

@@ -1,0 +1,89 @@
+
+.yoga-card-img{
+  width: 350px;
+}
+.card-text{
+  background: #514654;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+
+}
+
+.main-text{
+  width: 100%;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+  background: #7f8b4bab;
+  color: white;
+  font-size: 40px;
+  line-height: 55px;
+  font-weight: 600;
+  padding: 40px;
+}
+.section-1{
+  background: #f2d0a5;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: #514654;
+  font-weight: 600;
+}
+
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+.footer{
+  width: 100%;
+  margin-top: 20px;
+  background: #a9b186;;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  display: inline-flex;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+li{
+  width: 50%;
+  border: 1px solid #d6a464
+}
+li a {
+  display: block;
+  padding: 8px;
+  color: #514654;
+}
+a {
+  text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .header-img{
+    width: 125px;
+  }
+  .main-text{
+    width: 100%;
+    line-height: 40px;
+    font-size: 26px;
+    padding: 10px;
+  }
+  .section-1{
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+
+body{
+  margin: 0!important;
+  padding: 0!important;
+}
+

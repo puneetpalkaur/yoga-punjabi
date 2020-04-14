@@ -1,0 +1,14 @@
+<app-header></app-header>
+<section>
+
+  <div class="main-card" *ngFor="let p of pranayama">
+    <div class="card-img">
+      <img src={{p.imgSrc}} class="yoga-card-img">
+    </div>
+
+    <div class="card-text">
+      {{p.name}}
+    </div>
+  </div>
+
+</section>

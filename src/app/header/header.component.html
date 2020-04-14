@@ -1,0 +1,14 @@
+<div class="main">
+  <div class="container" routerLink="/">
+    <img src="https://storage.googleapis.com/punjabi-yoga/icons/workout.svg" class="header-img">
+    <div class="title title-font">
+      ਯੋਗਾ
+    </div>
+  </div>
+  <div class="nav">
+    <ul>
+      <li class="section-1 title-font" id="pranayama" [ngClass]="{'active':enableP}"><a  routerLink="/pranayama" [ngClass]="{'active':enableP}">ਪ੍ਰਾਣਾਯਾਮ</a></li>
+      <li class="section-1 title-font" id ="asana" [ngClass]="{'active':enableA}"><a routerLink="/asana" [ngClass]="{'active':enableA}">ਆਸਣ</a></li>
+    </ul>
+  </div>
+</div>
