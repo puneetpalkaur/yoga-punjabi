@@ -7,3 +7,12 @@ html, body{
   margin:0;
   padding:0;
 }
+.title-font{
+  font-family: 'Baloo Paaji 2', cursive;
+}
+.generic-font{
+  font-family: 'Mukta Mahee', sans-serif;
+}
+div{
+  box-sizing: border-box;
+}

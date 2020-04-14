@@ -25,15 +25,10 @@ div{
   margin-right: 45px;
 }
 .header-img{
-  width: 250px;
+  width: 190px;
   margin-left: 20px;
 }
-.title-font{
-  font-family: 'Baloo Paaji 2', cursive;
-}
-.generic-font{
-  font-family: 'Mukta Mahee', sans-serif;
-}
+
 .main-card{
   box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
   display: grid;
@@ -60,8 +55,9 @@ div{
   background: #7f8b4bab;
   color: white;
   font-size: 40px;
-  line-height: 40px;
+  line-height: 55px;
   font-weight: 600;
+  padding: 40px;
 }
 .section-1{
   background: #f2d0a5;
@@ -105,8 +101,11 @@ li a {
 a {
   text-decoration: none;
 }
-#asana, #pranayama{
-  margin-top: 6px;
+
+.active{
+ background: #514654!important;
+ color: white!important;
+ text-shadow: 1px 1px 1px #d6a464!important;
 }
 
 
