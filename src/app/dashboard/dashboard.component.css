@@ -20,12 +20,12 @@ div{
 }
 .title{
   color: #7f8b4b;
-  font-size: 100px;
+  font-size: 80px;
   text-shadow: 1px 1px 0px #514654;
   margin-right: 45px;
 }
 .header-img{
-  width: 190px;
+  width: 120px;
   margin-left: 20px;
 }
 
@@ -95,7 +95,6 @@ li{
 }
 li a {
   display: block;
-  padding: 8px;
   color: #514654;
 }
 a {
@@ -113,7 +112,7 @@ a {
 
 @media only screen and (max-width: 600px) {
   .header-img{
-    width: 125px;
+    width: 105px;
   }
   .main-text{
     width: 100%;

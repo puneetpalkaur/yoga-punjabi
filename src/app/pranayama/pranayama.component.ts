@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-pranayama',
@@ -7,28 +8,57 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PranayamaComponent implements OnInit {
  public pranayama;
-  constructor() {
+  constructor( public sanitize: DomSanitizer) {
+
+    const src1 = this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/nEaSojPV-6o');
+    const src2 = this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/G_RSmjVTZWg');
+    const src3 = this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/AtG7cx6p7DY');
+    const src4 = this.sanitize.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/qbA6gVhFqBU');
 
     this.pranayama = [
       {
-        name: 'ਬ੍ਰਹਮਰੀ',
-        imgSrc: 'https://storage.googleapis.com/punjabi-yoga/icons/brahmri.png',
-        details: ''
+        name: 'ਅਨੁਲੋਮ ਵਿਲੋਮ',
+        vidSrc: src1,
+        details:
+        '        <li>ਅਨੂਲੋਮ ਵਿਲੋਮ ਪ੍ਰਾਣਾਯਾਮ ਕਰਨਾ ਬਹੁਤ ਸੌਖਾ ਹੈ, ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਆਪਣੀਆਂ ਅੱਖਾਂ ਬੰਦ ਕਰੋ ਅਤੇ ਪਦਮ ਆਸਣ ਵਿਚ ਬੈਠੋ ਅਤੇ ਆਪਣੇ ਗੋਡਿਆਂ \'ਤੇ ਆਪਣੇ ਹੱਥ ਰੱਖੋ.</li>\n' +
+        '        <li>ਸੱਜੇ ਪਾਸੇ ਦੇ ਨੱਕ ਨੂੰ ਸੱਜੇ ਅੰਗੂਠੇ ਨਾਲ ਬੰਦ ਕਰੋ. ਖੱਬੇ ਪਾਸੇ ਦੇ ਨੱਕ ਰਾਹੀਂ ਹੌਲੀ ਹੌਲੀ ਸਾਹ ਲਓ, ਆਕਸੀਜਨ ਨੂੰ ਜਿੰਨਾ ਹੋ ਸਕੇ ਸਾਹ ਲਓ, ਇਹ ਤੁਹਾਡੇ ਫੇਫੜਿਆਂ ਨੂੰ ਹਵਾ ਨਾਲ ਭਰ ਦੇਵੇਗਾ.</li>\n' +
+        '        <li>ਆਪਣੇ ਅੰਗੂਠੇ ਨੂੰ ਆਪਣੇ ਸੱਜੇ ਨੱਕ ਤੋਂ ਹਟਾਓ, ਜਿਵੇਂ ਹੀ ਤੁਸੀਂ ਆਪਣੇ ਅੰਗੂਠੇ ਨੂੰ ਸੱਜੇ ਨੱਕ ਤੋਂ ਹਟਾਉਂਦੇ ਹੋ </li>\n' +
+        '        <li>ਜਦੋਂ ਤੁਸੀਂ ਸਾਹ ਛੱਡਦੇ ਹੋ ਆਪਣੀ ਦਰਮਿਆਨੀ ਉਂਗਲ ਨੂੰ ਆਪਣੇ ਖੱਬੇ ਨੱਕ ਤੇ ਵਰਤੋ ਤਾਂ ਕਿ ਸੱਜੇ ਨੱਕ ਤੋਂ ਸਾਹ ਬਾਹਰ ਕੱਢਿਆ ਜਾਵੇ</li>\n' +
+        '        <li>ਇਸ ਪ੍ਰਕਿਰਿਆ ਨੂੰ 5 ਮਿੰਟ ਲਈ ਦੁਹਰਾਓ</li>\n' +
+        '        <li>ਧਿਆਨ ਸਾਹ \'ਤੇ ਕੇਂਦ੍ਰਤ ਰੱਖੋ</li>\n'
       },
       {
-        name: 'ਅਨੁਲੋਮ ਵਿਲੋਮ',
-        imgSrc: 'https://storage.googleapis.com/punjabi-yoga/icons/anulom_vilom.png',
-        details: ''
+        name: 'ਬ੍ਰਹਮਰੀ',
+        vidSrc: src2,
+        details: '  <li>ਪਹਿਲਾਂ ਪਦਮ ਆਸਣ \'ਚ ਬੈਠੋ, ਆਪਣੀਆਂ ਅੱਖਾਂ ਬੰਦ ਕਰੋ ਅਤੇ ਆਪਣੀ ਰੀੜ੍ਹ ਨੂੰ ਸਿੱਧਾ ਰੱਖੋ</li>\n' +
+        '    <li>ਹੁਣ, ਆਪਣੇ ਹਥੇਲੀਆਂ ਖੋਲ੍ਹੋ ਅਤੇ ਆਪਣੇ ਕੰਨ ਨੂੰ ਆਪਣੇ ਅੰਗੂਠੇ ਨਾਲ ਬੰਦ ਕਰੋ</li>\n' +
+        '    <li>ਆਪਣੀਆਂ ਅੱਖਾਂ ਦੀਆਂ ਉਂਗਲਾਂ ਮੱਥੇ ਉੱਤੇ ਆਪਣੀਆਂ ਅੱਖਾਂ ਦੇ ਬਿਲਕੁਲ ਉੱਪਰ ਰੱਖੋ</li>\n' +
+        '    <li>ਆਪਣੀ ਮੱਧ ਅਤੇ ਅੰਗੂਠੀ ਉਂਗਲਾਂ ਨੂੰ ਆਪਣੀਆਂ ਅੱਖਾਂ ਤੇ ਅਰਾਮ ਦਿਓ</li>\n' +
+        '    <li>ਹੁਣ, ਆਪਣੀ ਇੰਡੈਕਸ ਉਂਗਲਾਂ ਮੱਥੇ \'ਤੇ ਰੱਖੋ ਅਤੇ ਬਾਕੀ ਉਂਗਲਾਂ ਨਾਲ ਅੱਖਾਂ ਬੰਦ ਕਰੋ</li>\n' +
+        '    <li>ਡੂੰਘੀ ਅਤੇ ਹੌਲੀ ਹੌਲੀ ਨੱਕ ਰਾਹੀਂ ਸਾਹ ਲੈਣਾ ਸ਼ੁਰੂ ਕਰੋ</li>\n' +
+        '    <li>ਮਧੂ ਮੱਖੀ ਦੀ ਅਵਾਜ਼ ਵਰਗੀ ਅਵਾਜ਼ ਮਾਰ ਕੇ ਆਪਣੇ ਮੂੰਹ ਨੂੰ ਨੇੜੇ ਰੱਖੋ ਅਤੇ ਸਾਹ ਬਾਹਰ ਕੱਢੋ</li>\n' +
+        '    <li>‘ਓਮ’ਆਵਾਜ਼ ਦਾ ਜਾਪ ਕਰਦੇ ਹੋਏ ਇਹ ਅਹਿਸਾਸ ਕਰੋ ਕਿ ਤੁਸੀਂ ਆਪਣੇ ਸਰੀਰ ਵਿੱਚੋਂ ਸਾਰੇ ਜ਼ਹਿਰੀਲੇਪਣ ਅਤੇ ਅਸ਼ੁੱਧੀਆਂ ਨੂੰ ਹਟਾ ਰਹੇ ਹੋ</li>\n' +
+        '    <li>ਇਸ ਪ੍ਰਕਿਰਿਆ ਨੂੰ 3-5 ਵਾਰ ਦੁਹਰਾਓ</li>'
       },
       {
         name: 'ਕਪਾਲ ਭਾਤੀ',
-        imgSrc: 'https://storage.googleapis.com/punjabi-yoga/icons/kapaal_bhaati.png',
-        details: ''
+        vidSrc: src3,
+        details: '<li>ਪਹਿਲਾਂ, ਪਦਮਸਨ \'ਤੇ ਬੈਠੋ ਅਤੇ ਆਪਣੀਆਂ ਅੱਖਾਂ ਬੰਦ ਕਰੋ ਅਤੇ ਰੀੜ੍ਹ ਦੀ ਹੱਡੀ ਨੂੰ ਸਿੱਧਾ ਰੱਖੋ</li>\n' +
+        '    <li>ਹੁਣ ਜਦੋਂ ਤੱਕ ਤੁਹਾਡੇ ਫੇਫੜੇ ਹਵਾ ਨਾਲ ਭਰੇ ਨਹੀਂ ਹੁੰਦੇ ਉਦੋਂ ਤਕ ਆਪਣੇ ਡੂੰਘੇ ਸਾਹ (ਡੂੰਘੇ ਤੌਰ ਤੇ ਸਾਹ ਲਓ) ਆਪਣੇ ਦੋਵੇਂ ਨਾਸਾਂ ਰਾਹੀਂ ਲਓ</li>\n' +
+        '    <li>ਹੁਣ ਜ਼ੋਰ ਨਾਲ ਦੋਵੇਂ ਨਾਸਾਂ ਨੂੰ ਕੱਢੋ, ਤਾਂ ਜੋ ਤੁਹਾਡਾ ਪੇਟ ਡੂੰਘੇ ਅੰਦਰ ਜਾਵੇ</li>\n' +
+        '    <li>ਜਦੋਂ ਤੁਸੀਂ ਸਾਹ ਛੱਡਦੇ ਹੋ ਤੁਸੀਂ ਆਪਣੇ ਪੇਟ ਵਿਚ ਕੁਝ ਦਬਾਅ ਮਹਿਸੂਸ ਕਰੋਗੇ</li>\n' +
+        '    <li>ਇਸ ਪ੍ਰਕਿਰਿਆ ਨੂੰ 5 ਮਿੰਟ ਲਈ ਦੁਹਰਾਓ</li>'
       },
       {
         name: 'ਅਗਨੀਸਰ',
-        imgSrc: 'https://storage.googleapis.com/punjabi-yoga/icons/agnisar_kriya.png',
-        details: ''
+        vidSrc: src4,
+        details: '<li>ਪਦਮਸਨ ਸਥਿਤੀ ਵਿਚ ਬੈਠੋ ਅਤੇ ਆਪਣੇ ਦੋਵੇਂ ਹੱਥ ਆਪਣੇ ਗੋਡਿਆਂ \'ਤੇ ਨਰਮੀ ਨਾਲ ਰੱਖੋ</li>\n' +
+        '    <li>ਆਪਣੀਆਂ ਅੱਖਾਂ ਬੰਦ ਕਰੋ ਅਤੇ ਜਦੋਂ ਤੁਸੀਂ ਇਸ ਸਥਿਤੀ \'ਤੇ ਬੈਠੇ ਹੋ ਤਾਂ ਆਪਣੇ ਆਮ ਸਾਹ\' ਤੇ ਧਿਆਨ ਕੇਂਦ੍ਰਤ ਕਰੋ</li>\n' +
+        '    <li>ਹੌਲੀ ਹੌਲੀ ਸਾਹ ਛੱਡੋ ਅਤੇ ਫਿਰ ਇਸਨੂੰ ਬਾਹਰ ਰੋਕੋ</li>\n' +
+        '    <li>ਹੁਣ ਤੁਸੀਂ ਸਾਹ ਰੋਕ ਕੇ ਆਪਣੇ ਪੇਟ ਦੀਆਂ ਮਾਸਪੇਸ਼ੀਆਂ (ਨਾਭੀ) ਨੂੰ ਆਪਣੀ ਰੀੜ੍ਹ ਦੀ ਹੱਡੀ ਵੱਲ ਵੱਲ ਖਿੱਚੋ</li>\n' +
+        '    <li>ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਸਾਹ ਨੂੰ ਰੋਕ ਸਕਦੇ ਹੋਂ, ਪੇਟ ਨੂੰ ਇਸੇ ਤਰਹ ਅੱਗੇ ਪਿੱਛੇ ਹਿਲਾਓ </li>\n' +
+        '    <li>ਜਦੋ ਸਾਹ ਨਾ ਰੋਕ ਪਾਓ ਤਾ ਰੁਕ ਕੇ ਆਰਾਮ ਕਰੋ </li>\n' +
+        '    <li>ਇਸ ਪ੍ਰਕਿਰਿਆ ਨੂੰ ਫਿਰ ਤੋਂ ਦੁਹਰਾਓ </li>'
       }
     ];
   }

@@ -8,6 +8,8 @@
   background: #665c65c7;
   box-shadow: 1px 1px 7px grey;
   color: white;
+  position: fixed;
+  bottom: 0;
 }
 
 .font-24{
