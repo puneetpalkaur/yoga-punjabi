@@ -8,6 +8,7 @@ import { PranayamaComponent } from './pranayama/pranayama.component';
 import { AsanaComponent } from './asana/asana.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderSmallComponent } from './header-small/header-small.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     PranayamaComponent,
     AsanaComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderSmallComponent
   ],
   imports: [
     BrowserModule,
