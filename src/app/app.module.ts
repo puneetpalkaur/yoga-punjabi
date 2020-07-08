@@ -9,6 +9,7 @@ import { AsanaComponent } from './asana/asana.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderSmallComponent } from './header-small/header-small.component';
+import { GhsissiComponent } from './ghsissi/ghsissi.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderSmallComponent } from './header-small/header-small.component';
     AsanaComponent,
     HeaderComponent,
     FooterComponent,
-    HeaderSmallComponent
+    HeaderSmallComponent,
+    GhsissiComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ export class HeaderSmallComponent implements OnInit {
 
   enableP = false;
   enableA = false;
+  enableI = false;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -18,6 +19,8 @@ export class HeaderSmallComponent implements OnInit {
       this.enableP = true;
     } else if (path === 'asana') {
       this.enableA = true;
+    } else if (path === 'ghsissi') {
+      this.enableI = true;
     }
   }
 

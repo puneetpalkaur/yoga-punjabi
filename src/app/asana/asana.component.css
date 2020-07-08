@@ -85,6 +85,21 @@ section>div:last-child {
   margin-bottom: 85px;
 }
 
+@media only screen and (min-width: 700px) {
+  .content{
+    margin-top: 200px;
+  }
+  iframe{
+    height: 600px;
+  }
+  .card-text{
+    font-size: 30px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 5px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .header-img{
     width: 125px;

@@ -9,6 +9,7 @@ import {ActivatedRoute} from '@angular/router';
 export class HeaderComponent implements OnInit {
   enableP = false;
   enableA = false;
+  enableI = false;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -17,6 +18,8 @@ export class HeaderComponent implements OnInit {
       this.enableP = true;
     } else if (path === 'asana') {
       this.enableA = true;
+    }else if (path === 'ghsissi') {
+      this.enableI = true;
     }
   }
 }

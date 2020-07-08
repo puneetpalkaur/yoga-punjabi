@@ -1,22 +1,26 @@
 <app-header-small></app-header-small>
 <section>
 
-  <div class="main-card" *ngFor="let p of pranayama">
-    <div class="card-text">
-      {{p.name}}
-    </div>
-    <div class="card-img">
-      <iframe width="100%" height="315" [src]=p.vidSrc frameborder="0"
-              allow="accelerometer;" allowfullscreen></iframe>
+ <div class="content">
+   <div class="main-card" *ngFor="let p of pranayama">
+     <div class="card-text">
+       {{p.name}}
+     </div>
+     <div class="flex-div">
+       <div class="card-img">
+         <iframe width="100%" height="315" [src]=p.vidSrc frameborder="0"
+                 allow="accelerometer;" allowfullscreen></iframe>
 
-    </div>
-    <div class="steps generic-font">
-     <ul  [innerHTML]=p.details>
-     </ul>
-    </div>
+       </div>
+       <div class="steps generic-font">
+         <ul  [innerHTML]=p.details>
+         </ul>
+       </div>
+     </div>
 
-  </div>
+   </div>
 
+ </div>
 </section>
 
 <app-footer></app-footer>
